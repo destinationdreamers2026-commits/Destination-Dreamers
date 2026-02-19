@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Simple Drag and Drop</h3>
+
+<!-- draggable box -->
+<div id="box" draggable="true" ondragstart="drag(event)"
+     style="width:100px;height:100px;background:orange;">
+</div>
+
+<br>
+
+<!-- drop area -->
+<div ondrop="drop(event)" ondragover="allowDrop(event)"
+     style="width:300px;height:200px;border:2px dashed black;">
+</div>
+
+<script>
+function allowDrop(e) {
+    e.preventDefault();   // allow drop
+}
+
+function drag(e) {
+    e.dataTransfer.setData("text", e.target.id);
+}
+
+function drop(e) {
+    e.preventDefault();
+    var data = e.dataTransfer.getData("text");
+    e.target.appendChild(document.getElementById(data));
+}
+</script>
+
+</body>
+</html>

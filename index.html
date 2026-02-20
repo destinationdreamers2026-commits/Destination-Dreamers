@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jishaan Azmi | Photography | clickbyazmi</title>
+    <link rel="icon" type="image/x-icon" href="clickbyazmi-favicon.png">
+    <meta name="description" content="View the creative photography and digital artwork by Jishaan Azmi, the founder of ClickByAzmi.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@900&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header">
+    <h1>Jishaan Azmi - <span id="clickbyazmi" style="cursor: pointer;">@clickbyazmi</span></h1>
+    <center><p>Explore the latest work from ClickByAzmi, the creative photography brand by Jishaan Azmi.</p></center>
+</div>
+
+<div id="gallery">
+    <!-- Images will be loaded dynamically -->
+</div>
+
+<footer>
+    <p>&copy; 2024 ClickByAzmi. All rights reserved. | Photography by Jishaan Azmi</p>
+</footer>
+
+<script>
+// Configuration - Use environment variables in production
+const CONFIG = {
+    GITHUB_TOKEN: 'YOUR_TOKEN_HERE',
+    REPO_OWNER: 'Jishaan-Azmi',
+    REPO_NAME: 'clickbyazmi',
+    ADMIN_PASSWORD: 'YOUR_PASSWORD_HERE'
+};
+
+// Basic gallery loader
+async function loadGallery() {
+    const gallery = document.getElementById('gallery');
+    gallery.innerHTML = '<p style="text-align:center;">Gallery loading...</p>';
+}
+
+document.addEventListener('DOMContentLoaded', loadGallery);
+</script>
+
+</body>
+</html>
